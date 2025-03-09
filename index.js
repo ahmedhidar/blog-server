@@ -23,6 +23,7 @@ const errorHandler = require("./middlewares/errorhandler");
 
 // create express app
 const app = express();
+app.set("trust proxy", 1); 
 
 // MIDDLEWARES
 app.use(express.json());
