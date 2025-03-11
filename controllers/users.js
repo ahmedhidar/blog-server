@@ -70,7 +70,7 @@ const getUsers = async (req, res) => {
 
 const getUserById = async (req, res) => {
   const userId = req.params.id;
-  const user = await User.findById(userId).populate("posts");
+  const user = await User.findById(userId);
   if (!user) {
     throw new APIError(`user with id: ${userId} is not found`, 404);
   }
